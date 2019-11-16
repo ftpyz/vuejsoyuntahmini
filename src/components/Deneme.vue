@@ -1,13 +1,14 @@
 <template>
-  <div>deneme mesajir</div>
+  <div><SecondComponent /> <FirstComponent /></div>
 </template>
 <script>
+import SecondComponent from "./SecondComponent";
+import FirstComponent from "./FirstComponent";
 export default {
   name: "deneme",
-  beforeRouteLeave(to, from, next) {
-    console.log(to);
-    console.log(from);
-    next();
+  components: {
+    SecondComponent,
+    FirstComponent
   }
 };
 </script>
